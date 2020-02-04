@@ -2,6 +2,8 @@
 
 The model is trained with [PyTorch](https://pytorch.org) and the codes for MCRG analysis  are written in C++. Please install PyTorch  and make sure the compiler supports C++11. The figures are plotted with [Matplotlib](https://matplotlib.org). Please install it as well.
 
+The code by default run on GPU, but fallback to CPU if no GPU is available.
+
 ### Examples
 First, we prepare a dataset with 10,000 spin configurations MC sampled 32x32 Ising model at the critical temperature.
 
