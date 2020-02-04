@@ -11,7 +11,8 @@ import pickle
 import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 
-device = torch.device("cuda")
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+print('... device on {}'.format(device), file=sys.stderr)
 
 class RBM(torch.nn.Module):
     def __init__(self, input_width, filter_width):
